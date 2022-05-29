@@ -6,7 +6,7 @@ const path = require('path');
 const utils = require('./utils');
 
 const pageController = (req, res) => {
-    res.render(`${req.params.id}`);
+    res.render(`vi/${req.params.id}`);
 }
 
 

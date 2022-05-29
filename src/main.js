@@ -6,7 +6,7 @@ const http = require('http');
 
 const utils = require('./utils');
 const route = require('./route');
-//const routevi = require('./route-vi');
+const routevi = require('./route-vi');
 
 
 const main = () => {
@@ -20,7 +20,7 @@ const main = () => {
         maxAge: 259000000
     }));
     app.set('view engine', 'ejs');
-    //app.use('/vi/', routevi);
+    app.use('/vi/', routevi);
     app.use('/', route);
     const server = http.createServer(app);
     const port = process.env.PORT || 5500;
